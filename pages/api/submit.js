@@ -3,9 +3,10 @@ import initMiddleware from '../../lib/init-middleware'
 
 const cors = initMiddleware(Cors({
   origin: [
-    'https://karaoke-6ae33.web.app/',
-    'https://karaoke-6ae33.firebaseapp.com/',
-    'https://karaoke.barbeque.one/'
+    'https://localhost:3000', // uncomment for debug
+    'https://karaoke-6ae33.web.app',
+    'https://karaoke-6ae33.firebaseapp.com',
+    'https://karaoke.barbeque.one'
   ],
   methods: ['POST', 'OPTIONS'],
 }))

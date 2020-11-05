@@ -45,7 +45,7 @@ export default async function handler(req, res) {
         res.json({error: true, message: 'song error'})
         break
       default:
-        res.json({error: true, message: 'unknown response', response})
+        res.json({error: true, message: 'unknown response', response: response.text})
     }
   } else {
     res.statusCode = 200

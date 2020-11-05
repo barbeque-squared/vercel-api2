@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   await cors(req, res)
   fetch(
     'https://www.mylittlekaraoke.com/highscores/index.php/score/submit',
-    {method: 'POST', headers: {'Content-Type': 'application/json'}, body: req.body}
+    {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(req.body)}
   ).then(response => response.text())
   .then(text => {
     res.statusCode = 200
